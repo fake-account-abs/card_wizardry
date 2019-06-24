@@ -1,6 +1,6 @@
 # card_wizardry
 
-![Game](http://http://functionalfitness.ie/functionalfitness.ie/wp-content/uploads/2013/03/jigsaw.png)
+![Game](jigsaw.png)
 
 It's your turn to learn how to build proper apps with JS...
 
