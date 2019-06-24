@@ -1,6 +1,6 @@
 # card_wizardry
 
-![Game](jigsaw.png)
+![Game](/jigsaw.png?raw=true "Title")
 
 It's your turn to learn how to build proper apps with JS...
 
