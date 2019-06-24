@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Game</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+
+    <script src="src/main/js/business/CondemnedMerchant.js"></script>
+    <script src="src/main/js/business/PossessedCollector.js"></script>
+    <script src="src/main/js/domain/Activity.js"></script>
+    <script src="src/main/js/domain/Resource.js"></script>
+    <script src="src/main/js/front/Inbound.js"></script>
+    <script src="src/main/js/front/ViewRenderer.js"></script>
+    <script src="src/main/js/run/Container.js"></script>
+    <script src="src/main/js/storage/CentralNervousSystem.js"></script>
+    <script src="src/main/js/storage/EffciencyIndicator.js"></script>
+    <script src="src/main/js/storage/ResourceState.js"></script>
+    <script src="src/main/js/storage/Stock.js"></script>
+
+    <script type="text/javascript">
+        let container;
+        window.onload = load;
+        function load()
+        {
+            container = new Container();
+            container.inbound.render();
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                Possessed Collector
+            </h3>
+            <div class="btn-group" role="group">
+                <button class="btn btn-secondary" type="button" onclick="container.inbound.work()">
+                    Work
+                </button>
+                <button class="btn btn-secondary" type="button" onclick="container.inbound.feed()">
+                    Feed
+                </button>
+                <button class="btn btn-secondary" type="button" onclick="container.inbound.pray()">
+                    Pray
+                </button>
+                <button class="btn btn-secondary" type="button" onclick="container.inbound.rest()">
+                    Rest
+                </button>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" >Blood</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" >Mana</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%;">Gold</div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3>
+                Condemned Merchant
+            </h3>
+            <ul class="nav nav-pills"></ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
